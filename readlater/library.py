@@ -63,6 +63,14 @@ def add_item(
         except Exception as e:
             print(f"  (OneNote sync failed: {e})")
 
+    # Auto-sync to Monday.com if enabled
+    if config.get("monday", {}).get("auto_sync") and config.get("monday", {}).get("api_token"):
+        try:
+            from readlater.monday import sync_to_monday
+            sync_to_monday(items=[item])
+        except Exception as e:
+            print(f"  (Monday.com sync failed: {e})")
+
     return item
 
 

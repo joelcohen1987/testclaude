@@ -69,6 +69,16 @@ def main():
     sync_on_p = sub.add_parser("sync-onenote", help="Sync your reading list to OneNote")
     sync_on_p.add_argument("--all", action="store_true", dest="sync_all", help="Re-sync all items (not just new ones)")
 
+    # --- readlater config-monday ---
+    cfg_mon_p = sub.add_parser("config-monday", help="Configure Monday.com integration")
+    cfg_mon_p.add_argument("--api-token", required=True, help="Monday.com personal API token")
+    cfg_mon_p.add_argument("--auto-sync", action="store_true", help="Auto-sync new items to Monday.com when added")
+    cfg_mon_p.add_argument("--setup", action="store_true", help="Print setup instructions")
+
+    # --- readlater sync-monday ---
+    sync_mon_p = sub.add_parser("sync-monday", help="Sync your reading list to Monday.com")
+    sync_mon_p.add_argument("--all", action="store_true", dest="sync_all", help="Re-sync all items (not just new ones)")
+
     # --- readlater dashboard ---
     dash_p = sub.add_parser("dashboard", help="Open the web dashboard (works on phone, iPad, desktop)")
     dash_p.add_argument("--port", type=int, default=8247, help="Port for dashboard (default: 8247)")
@@ -102,6 +112,10 @@ def main():
         cmd_config_onenote(args)
     elif args.command == "sync-onenote":
         cmd_sync_onenote(args)
+    elif args.command == "config-monday":
+        cmd_config_monday(args)
+    elif args.command == "sync-monday":
+        cmd_sync_monday(args)
     elif args.command == "dashboard":
         cmd_dashboard(args)
 
@@ -311,6 +325,37 @@ def cmd_sync_onenote(args):
         _save_library(library)
 
     sync_to_onenote()
+
+
+def cmd_config_monday(args):
+    if args.setup:
+        from readlater.monday import _print_setup_instructions
+        _print_setup_instructions()
+        return
+
+    from readlater.monday import configure_monday
+    configure_monday(args.api_token)
+
+    if args.auto_sync:
+        config = get_config()
+        config.setdefault("monday", {})["auto_sync"] = True
+        save_config(config)
+        print("Auto-sync enabled: new items will be pushed to Monday.com automatically.")
+
+
+def cmd_sync_monday(args):
+    from readlater.library import _load_library, _save_library, sync_folder
+    from readlater.monday import sync_to_monday
+
+    sync_folder()
+
+    if args.sync_all:
+        library = _load_library()
+        for item in library:
+            item.pop("monday_item_id", None)
+        _save_library(library)
+
+    sync_to_monday()
 
 
 def cmd_dashboard(args):

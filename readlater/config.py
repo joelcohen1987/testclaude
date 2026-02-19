@@ -39,6 +39,11 @@ DEFAULT_CONFIG = {
         "section_id": "",
         "auto_sync": False,
     },
+    "monday": {
+        "api_token": "",
+        "board_id": "",
+        "auto_sync": False,
+    },
 }
 
 
