@@ -441,39 +441,18 @@ function testOneEmail() {
 // ============================================================
 
 /**
- * Run this ONCE in the Apps Script editor to save your Monday.com API key.
- * It gets stored in Google's secure Script Properties (not in the code).
- * A popup will ask you to paste your key — after that you never need it again.
- *
- * Steps:
- *   1. Select "storeApiKey" from the function dropdown
- *   2. Click Run
- *   3. Paste your Monday.com API key in the popup
- *   4. Done — the key is saved permanently for this script
+ * Run this ONCE to save your Monday.com API key securely.
+ * Paste your key into the MY_KEY variable below, run it, then delete the key from the code.
  */
 function storeApiKey() {
-  var ui = SpreadsheetApp.getUi ? SpreadsheetApp.getUi() : null;
-  var key;
+  // >>> PASTE YOUR KEY BETWEEN THE QUOTES, RUN, THEN DELETE IT <<<
+  var MY_KEY = "";
 
-  // Try the popup dialog first; fall back to Logger prompt
-  try {
-    key = Browser.inputBox(
-      "Monday.com API Key",
-      "Paste your Monday.com Personal API Token below:",
-      Browser.Buttons.OK_CANCEL
-    );
-  } catch (e) {
-    // If Browser.inputBox isn't available, check if it was passed as a script property already
-    Logger.log("Could not show popup. Set the key manually:");
-    Logger.log('  PropertiesService.getScriptProperties().setProperty("MONDAY_API_KEY", "your-key-here");');
+  if (!MY_KEY) {
+    Logger.log("Paste your API key into the MY_KEY variable in storeApiKey(), then run again.");
     return;
   }
 
-  if (!key || key === "cancel") {
-    Logger.log("Cancelled — no key saved.");
-    return;
-  }
-
-  PropertiesService.getScriptProperties().setProperty("MONDAY_API_KEY", key.trim());
-  Logger.log("API key saved to Script Properties. You only need to run this once.");
+  PropertiesService.getScriptProperties().setProperty("MONDAY_API_KEY", MY_KEY.trim());
+  Logger.log("API key saved! Now delete the key from MY_KEY and save the file.");
 }
