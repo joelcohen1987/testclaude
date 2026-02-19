@@ -13,14 +13,15 @@
  */
 
 // ============================================================
-// CONFIGURATION — fill these in
+// CONFIGURATION
 // ============================================================
 const CONFIG = {
-  // Your Monday.com API token (from avatar → Administration → API)
-  MONDAY_API_TOKEN: "YOUR_MONDAY_API_TOKEN_HERE",
+  // API token is stored securely in Script Properties (not in code).
+  // Run storeApiKey() once to save it — see bottom of this file.
+  MONDAY_API_TOKEN: PropertiesService.getScriptProperties().getProperty("MONDAY_API_KEY") || "",
 
   // Your Monday.com board ID (from the board URL: monday.com/boards/BOARD_ID)
-  MONDAY_BOARD_ID: "YOUR_BOARD_ID_HERE",
+  MONDAY_BOARD_ID: "18400854943",
 
   // Gmail label applied to processed emails (so we don't process twice)
   PROCESSED_LABEL: "AddedToMonday",
@@ -31,7 +32,7 @@ const CONFIG = {
   // Only process emails FROM these addresses (your personal accounts).
   // Anything else that lands in the inbox gets ignored.
   ALLOWED_SENDERS: [
-    "YOUREMAIL@gmail.com",
+    "joelcohen1987@gmail.com",
     // Add more addresses here if needed, e.g.:
     // "joel@workemail.com",
   ],
@@ -433,4 +434,46 @@ function testOneEmail() {
   );
   Logger.log("Detected type: " + contentType);
   Logger.log("\nRun processNewEmails() to actually create the Monday.com item.");
+}
+
+// ============================================================
+// ONE-TIME SETUP — run this once to store your API key securely
+// ============================================================
+
+/**
+ * Run this ONCE in the Apps Script editor to save your Monday.com API key.
+ * It gets stored in Google's secure Script Properties (not in the code).
+ * A popup will ask you to paste your key — after that you never need it again.
+ *
+ * Steps:
+ *   1. Select "storeApiKey" from the function dropdown
+ *   2. Click Run
+ *   3. Paste your Monday.com API key in the popup
+ *   4. Done — the key is saved permanently for this script
+ */
+function storeApiKey() {
+  var ui = SpreadsheetApp.getUi ? SpreadsheetApp.getUi() : null;
+  var key;
+
+  // Try the popup dialog first; fall back to Logger prompt
+  try {
+    key = Browser.inputBox(
+      "Monday.com API Key",
+      "Paste your Monday.com Personal API Token below:",
+      Browser.Buttons.OK_CANCEL
+    );
+  } catch (e) {
+    // If Browser.inputBox isn't available, check if it was passed as a script property already
+    Logger.log("Could not show popup. Set the key manually:");
+    Logger.log('  PropertiesService.getScriptProperties().setProperty("MONDAY_API_KEY", "your-key-here");');
+    return;
+  }
+
+  if (!key || key === "cancel") {
+    Logger.log("Cancelled — no key saved.");
+    return;
+  }
+
+  PropertiesService.getScriptProperties().setProperty("MONDAY_API_KEY", key.trim());
+  Logger.log("API key saved to Script Properties. You only need to run this once.");
 }
