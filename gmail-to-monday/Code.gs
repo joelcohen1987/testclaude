@@ -60,14 +60,16 @@ function processNewEmails() {
     const urls = extractUrls(body);
     const firstUrl = urls.length > 0 ? urls[0] : "";
 
-    // Detect content type from subject/body/URLs
-    const contentType = detectContentType(subject, body, firstUrl);
-
     // Check for PDF attachments
     const attachments = firstMsg.getAttachments();
     const pdfAttachments = attachments.filter(function (a) {
       return a.getContentType() === "application/pdf";
     });
+
+    // Detect content type — PDF attachments always override to PDF
+    const contentType = pdfAttachments.length > 0
+      ? "PDF"
+      : detectContentType(subject, body, firstUrl);
 
     // Create Monday.com item
     const created = createMondayItem(subject, contentType, firstUrl, date);
