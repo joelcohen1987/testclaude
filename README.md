@@ -54,6 +54,41 @@ readlater email --search '(FROM "newsletter@example.com")'
 In Gmail, create a filter that applies the label `ReadLater` to emails you want to
 collect (newsletters, saved articles, etc). The tool will look for that label by default.
 
+## Chrome extension (one-click save from your browser)
+
+This is the easiest way to use ReadLater. A button in your browser toolbar lets you save
+any page — blog posts, Gmail emails, Outlook emails — with one click.
+
+### Setup (one time)
+
+1. Open Chrome and go to `chrome://extensions`
+2. Turn on **Developer mode** (toggle in the top-right corner)
+3. Click **Load unpacked**
+4. Select the `chrome-extension` folder from this project
+5. You'll see a blue "R" icon appear in your toolbar
+
+### Using it
+
+1. **Start the server** — open a terminal and run:
+   ```
+   readlater serve
+   ```
+   Leave this running in the background. (The Chrome extension talks to this.)
+
+2. **Save a webpage** — navigate to any page, click the blue "R" icon, click **Save This Page as PDF**.
+
+3. **Save an email** — open an email in Gmail or Outlook (in Chrome), click the "R" icon, click **Save Email Content**. It grabs the email body and converts it to PDF.
+
+4. **Right-click to save** — right-click on any page or link and choose **ReadLater: Save this page/link as PDF**.
+
+### Desktop drag-and-drop (optional)
+
+There are also scripts in the `desktop/` folder you can put on your desktop:
+
+- **Mac**: `save-to-readlater.command` — double-click to open, or drag files onto it
+- **Windows**: `save-to-readlater.bat` — same idea
+- **Linux**: `save-to-readlater.desktop` — copy to your desktop for a drag target
+
 ## Managing your reading list
 
 ```bash

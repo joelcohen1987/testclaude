@@ -45,6 +45,10 @@ def main():
     # --- readlater open ---
     open_p = sub.add_parser("open", help="Open the reading folder in your file manager")
 
+    # --- readlater serve ---
+    serve_p = sub.add_parser("serve", help="Start the local server (needed for the Chrome extension)")
+    serve_p.add_argument("--port", type=int, default=24247, help="Port to listen on (default: 24247)")
+
     args = parser.parse_args()
 
     if args.command is None:
@@ -63,6 +67,8 @@ def main():
         cmd_list(args)
     elif args.command == "open":
         cmd_open(args)
+    elif args.command == "serve":
+        cmd_serve(args)
 
 
 def cmd_add(args):
@@ -165,6 +171,12 @@ def cmd_open(args):
             print(f"Open this folder manually: {reading_dir}")
     except Exception:
         print(f"Could not open folder. Path: {reading_dir}")
+
+
+def cmd_serve(args):
+    from readlater.server import run_server
+
+    run_server(port=args.port)
 
 
 if __name__ == "__main__":

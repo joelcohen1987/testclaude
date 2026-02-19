@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Save to ReadLater
+Comment=Drop files here to save as PDF to your reading folder
+Exec=bash -c 'for f in %F; do readlater add "$f"; done; read -p "Done! Press Enter to close."'
+Icon=document-save
+Terminal=true
+Categories=Utility;
+MimeType=application/pdf;text/html;text/plain;application/vnd.openxmlformats-officedocument.wordprocessingml.document;
