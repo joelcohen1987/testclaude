@@ -130,10 +130,60 @@ There are also scripts in the `desktop/` folder you can put on your desktop:
 - **Windows**: `save-to-readlater.bat` — same idea
 - **Linux**: `save-to-readlater.desktop` — copy to your desktop for a drag target
 
+## Unified dashboard (access from any device)
+
+A mobile-friendly web page that shows your entire reading/listening list — PDFs,
+audio, links — in one place. Open it on your phone, iPad, or desktop browser.
+
+```bash
+# Start the dashboard
+readlater dashboard
+
+# Start dashboard + Chrome extension server together
+readlater dashboard --with-server
+```
+
+Then open `http://localhost:8247` on your computer, or `http://<your-computer-ip>:8247`
+on your iPhone/iPad (must be on the same Wi-Fi).
+
+**To add it to your iPhone home screen:** Open the URL in Safari, tap the Share button,
+tap "Add to Home Screen". Now it looks and feels like an app.
+
+### Syncing across devices with OneDrive
+
+Point your reading folder to OneDrive so everything syncs automatically:
+
+```bash
+readlater config --reading-dir ~/OneDrive/ReadLater
+```
+
+Now your PDFs and library are available in the OneDrive app on every device.
+
+## Audio and podcasts
+
+Save Spotify podcasts, YouTube videos, earnings calls, or any audio:
+
+```bash
+# Spotify podcast episode
+readlater add https://open.spotify.com/episode/...
+
+# YouTube earnings call / interview
+readlater add https://www.youtube.com/watch?v=...
+
+# Direct audio file (gets downloaded)
+readlater add https://example.com/earnings-call-q4.mp3
+```
+
+These show up in your dashboard alongside PDFs. Tapping opens them in the
+right app (Spotify, YouTube, etc).
+
+The Chrome extension handles these too — if you're on a Spotify or YouTube page,
+click the "R" button and it saves the link to your list.
+
 ## Managing your reading list
 
 ```bash
-# List everything in your reading folder
+# List everything (PDFs, audio, links)
 readlater list
 
 # Open the reading folder in your file manager
@@ -141,7 +191,7 @@ readlater open
 
 # View or change config
 readlater config --show
-readlater config --reading-dir ~/Dropbox/ReadingList
+readlater config --reading-dir ~/OneDrive/ReadLater
 ```
 
 ## Supported input formats
@@ -151,6 +201,9 @@ readlater config --reading-dir ~/Dropbox/ReadingList
 | Web URL | Renders the full page (JS included) to PDF |
 | Email body | Converts to a nicely formatted PDF |
 | PDF attachment | Saves directly |
+| Spotify link | Saved as link, opens in Spotify app |
+| YouTube link | Saved as link, opens in YouTube app |
+| Audio file (.mp3, etc) | Downloaded to reading folder |
 | `.html` / `.htm` | Renders to PDF |
 | `.md` | Converts Markdown → PDF |
 | `.txt` | Wraps in readable layout → PDF |

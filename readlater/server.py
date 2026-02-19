@@ -44,8 +44,20 @@ class ReadLaterHandler(BaseHTTPRequestHandler):
             # Run in background thread so we respond immediately
             def do_save():
                 try:
+                    from readlater.audio import is_audio_url, save_audio
+                    from readlater.library import add_item
                     from readlater.web import fetch_url_to_pdf
-                    fetch_url_to_pdf(url, filename=title)
+
+                    if is_audio_url(url):
+                        save_audio(url, title=title)
+                    else:
+                        result = fetch_url_to_pdf(url, filename=title)
+                        add_item(
+                            title=title or result.stem.replace("-", " ").title(),
+                            content_type="pdf",
+                            source_url=url,
+                            local_file=result.name,
+                        )
                 except Exception as e:
                     print(f"  Error saving {url}: {e}")
 
@@ -87,6 +99,8 @@ class ReadLaterHandler(BaseHTTPRequestHandler):
                             page.pdf(path=str(pdf_path), format="Letter", print_background=True)
                             browser.close()
                         print(f"  Saved HTML content: {pdf_path}")
+                        from readlater.library import add_item
+                        add_item(title=title, content_type="pdf", local_file=pdf_path.name)
                         return
                     except ImportError:
                         pass
@@ -97,6 +111,8 @@ class ReadLaterHandler(BaseHTTPRequestHandler):
                         doc = weasyprint.HTML(string=html)
                         doc.write_pdf(str(pdf_path))
                         print(f"  Saved HTML content: {pdf_path}")
+                        from readlater.library import add_item
+                        add_item(title=title, content_type="pdf", local_file=pdf_path.name)
                         return
                     except ImportError:
                         pass

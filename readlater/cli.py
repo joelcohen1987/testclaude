@@ -59,6 +59,11 @@ def main():
     autostart_p = sub.add_parser("autostart", help="Set up ReadLater to run automatically when your computer starts")
     autostart_p.add_argument("action", choices=["install", "uninstall", "status"], help="Install, uninstall, or check autostart status")
 
+    # --- readlater dashboard ---
+    dash_p = sub.add_parser("dashboard", help="Open the web dashboard (works on phone, iPad, desktop)")
+    dash_p.add_argument("--port", type=int, default=8247, help="Port for dashboard (default: 8247)")
+    dash_p.add_argument("--with-server", action="store_true", help="Also start the Chrome extension server")
+
     args = parser.parse_args()
 
     if args.command is None:
@@ -83,10 +88,14 @@ def main():
         cmd_watch(args)
     elif args.command == "autostart":
         cmd_autostart(args)
+    elif args.command == "dashboard":
+        cmd_dashboard(args)
 
 
 def cmd_add(args):
+    from readlater.audio import is_audio_url, save_audio
     from readlater.ingest import ingest_file
+    from readlater.library import add_item
     from readlater.web import fetch_url_to_pdf
 
     sources = args.sources
@@ -100,9 +109,23 @@ def cmd_add(args):
         print(f"Adding: {source}")
         try:
             if source.startswith("http://") or source.startswith("https://"):
-                fetch_url_to_pdf(source, filename=name)
+                if is_audio_url(source):
+                    save_audio(source, title=name)
+                else:
+                    result = fetch_url_to_pdf(source, filename=name)
+                    add_item(
+                        title=name or result.stem.replace("-", " ").title(),
+                        content_type="pdf",
+                        source_url=source,
+                        local_file=result.name,
+                    )
             else:
-                ingest_file(source, filename=name)
+                result = ingest_file(source, filename=name)
+                add_item(
+                    title=name or result.stem.replace("-", " ").title(),
+                    content_type="pdf",
+                    local_file=result.name,
+                )
         except Exception as e:
             print(f"  Error: {e}")
 
@@ -156,16 +179,22 @@ def cmd_config(args):
 
 
 def cmd_list(args):
-    reading_dir = get_reading_dir()
-    pdfs = sorted(reading_dir.glob("*.pdf"))
-    if not pdfs:
-        print(f"No PDFs in {reading_dir}")
+    from readlater.library import get_items, sync_folder
+
+    sync_folder()
+    items = get_items(include_consumed=False)
+    if not items:
+        print(f"Nothing in your reading list. Add something with: readlater add <url>")
         return
-    print(f"Reading folder: {reading_dir}\n")
-    for i, pdf in enumerate(pdfs, 1):
-        size_kb = pdf.stat().st_size / 1024
-        print(f"  {i:3}. {pdf.name}  ({size_kb:.0f} KB)")
-    print(f"\n{len(pdfs)} PDF(s) total.")
+
+    type_icons = {"pdf": "[PDF]", "audio": "[AUDIO]", "link": "[LINK]"}
+    print(f"Reading list ({len(items)} items):\n")
+    for i, item in enumerate(items, 1):
+        icon = type_icons.get(item["type"], "[?]")
+        title = item.get("title", "Untitled")
+        print(f"  {i:3}. {icon:8} {title}")
+    print(f"\nFolder: {get_reading_dir()}")
+    print("Dashboard: readlater dashboard")
 
 
 def cmd_open(args):
@@ -235,6 +264,18 @@ def cmd_autostart(args):
         uninstall_autostart()
     elif args.action == "status":
         check_autostart()
+
+
+def cmd_dashboard(args):
+    import threading
+    from readlater.dashboard import run_dashboard
+
+    if args.with_server:
+        from readlater.server import run_server
+        t = threading.Thread(target=run_server, daemon=True)
+        t.start()
+
+    run_dashboard(port=args.port)
 
 
 if __name__ == "__main__":
