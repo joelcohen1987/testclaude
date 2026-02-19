@@ -133,7 +133,7 @@ function createMondayItem(title, contentType, sourceUrl, dateAdded) {
   const colValues = {};
 
   if (columns["Type"]) {
-    colValues[columns["Type"]] = contentType;
+    colValues[columns["Type"]] = { label: contentType };
   }
 
   if (columns["Source URL"] && sourceUrl) {
@@ -301,13 +301,29 @@ function mondayQuery(query, variables) {
     "https://api.monday.com/v2",
     options
   );
-  const result = JSON.parse(response.getContentText());
+  const responseCode = response.getResponseCode();
+  const responseText = response.getContentText();
+
+  Logger.log("Monday API response (" + responseCode + "): " + responseText.substring(0, 500));
+
+  if (responseCode !== 200) {
+    Logger.log("Monday.com HTTP error " + responseCode + ": " + responseText);
+    return null;
+  }
+
+  const result = JSON.parse(responseText);
 
   if (result.errors) {
     Logger.log(
       "Monday.com API error: " +
         result.errors.map(function (e) { return e.message; }).join("; ")
     );
+    return null;
+  }
+
+  // Monday.com can also return error_message at the top level (auth errors)
+  if (result.error_message) {
+    Logger.log("Monday.com auth error: " + result.error_message);
     return null;
   }
 
