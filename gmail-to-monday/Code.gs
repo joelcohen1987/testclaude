@@ -27,6 +27,14 @@ const CONFIG = {
 
   // How many emails to process per run (stay under Apps Script limits)
   MAX_PER_RUN: 10,
+
+  // Only process emails FROM these addresses (your personal accounts).
+  // Anything else that lands in the inbox gets ignored.
+  ALLOWED_SENDERS: [
+    "YOUREMAIL@gmail.com",
+    // Add more addresses here if needed, e.g.:
+    // "joel@workemail.com",
+  ],
 };
 
 // ============================================================
@@ -55,6 +63,18 @@ function processNewEmails() {
     const from = firstMsg.getFrom();
     const body = firstMsg.getPlainBody() || "";
     const date = firstMsg.getDate();
+
+    // Skip emails not from allowed senders
+    const senderEmail = from.replace(/.*<([^>]+)>.*/, "$1").toLowerCase();
+    const isAllowed = CONFIG.ALLOWED_SENDERS.some(function (addr) {
+      return senderEmail === addr.toLowerCase();
+    });
+    if (!isAllowed) {
+      Logger.log("  Skipping (not from allowed sender): " + from);
+      thread.addLabel(label);
+      thread.markRead();
+      continue;
+    }
 
     // Extract URLs from the email body
     const urls = extractUrls(body);
