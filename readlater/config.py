@@ -34,6 +34,11 @@ DEFAULT_CONFIG = {
         "timeout": 30,
         "wait_for_js": True,
     },
+    "onenote": {
+        "client_id": "",
+        "section_id": "",
+        "auto_sync": False,
+    },
 }
 
 

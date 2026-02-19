@@ -59,6 +59,16 @@ def main():
     autostart_p = sub.add_parser("autostart", help="Set up ReadLater to run automatically when your computer starts")
     autostart_p.add_argument("action", choices=["install", "uninstall", "status"], help="Install, uninstall, or check autostart status")
 
+    # --- readlater config-onenote ---
+    cfg_on_p = sub.add_parser("config-onenote", help="Configure OneNote integration (Azure AD app)")
+    cfg_on_p.add_argument("--client-id", required=True, help="Azure AD Application (client) ID")
+    cfg_on_p.add_argument("--auto-sync", action="store_true", help="Auto-sync new items to OneNote when added")
+    cfg_on_p.add_argument("--setup", action="store_true", help="Print setup instructions for Azure AD app")
+
+    # --- readlater sync-onenote ---
+    sync_on_p = sub.add_parser("sync-onenote", help="Sync your reading list to OneNote")
+    sync_on_p.add_argument("--all", action="store_true", dest="sync_all", help="Re-sync all items (not just new ones)")
+
     # --- readlater dashboard ---
     dash_p = sub.add_parser("dashboard", help="Open the web dashboard (works on phone, iPad, desktop)")
     dash_p.add_argument("--port", type=int, default=8247, help="Port for dashboard (default: 8247)")
@@ -88,6 +98,10 @@ def main():
         cmd_watch(args)
     elif args.command == "autostart":
         cmd_autostart(args)
+    elif args.command == "config-onenote":
+        cmd_config_onenote(args)
+    elif args.command == "sync-onenote":
+        cmd_sync_onenote(args)
     elif args.command == "dashboard":
         cmd_dashboard(args)
 
@@ -264,6 +278,39 @@ def cmd_autostart(args):
         uninstall_autostart()
     elif args.action == "status":
         check_autostart()
+
+
+def cmd_config_onenote(args):
+    if args.setup:
+        from readlater.onenote import _print_setup_instructions
+        _print_setup_instructions()
+        return
+
+    from readlater.onenote import configure_onenote
+    configure_onenote(args.client_id)
+
+    if args.auto_sync:
+        config = get_config()
+        config.setdefault("onenote", {})["auto_sync"] = True
+        save_config(config)
+        print("Auto-sync enabled: new items will be pushed to OneNote automatically.")
+
+
+def cmd_sync_onenote(args):
+    from readlater.library import _load_library, _save_library, sync_folder
+    from readlater.onenote import sync_to_onenote
+
+    # Make sure library is up to date with folder contents
+    sync_folder()
+
+    if args.sync_all:
+        # Clear onenote_page_id from all items so they re-sync
+        library = _load_library()
+        for item in library:
+            item.pop("onenote_page_id", None)
+        _save_library(library)
+
+    sync_to_onenote()
 
 
 def cmd_dashboard(args):

@@ -17,9 +17,10 @@ weasyprint = ["weasyprint"]
 markdown = ["markdown"]
 # For image conversion
 images = ["Pillow"]
-# For Word doc conversion (needs system libreoffice too)
+# For OneNote integration
+onenote = ["msal", "requests"]
 # Everything
-all = ["playwright", "weasyprint", "markdown", "Pillow"]
+all = ["playwright", "weasyprint", "markdown", "Pillow", "msal", "requests"]
 
 [project.scripts]
 readlater = "readlater.cli:main"

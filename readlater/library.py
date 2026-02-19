@@ -53,6 +53,16 @@ def add_item(
     items = _load_library()
     items.insert(0, item)  # newest first
     _save_library(items)
+
+    # Auto-sync to OneNote if enabled
+    config = get_config()
+    if config.get("onenote", {}).get("auto_sync") and config.get("onenote", {}).get("client_id"):
+        try:
+            from readlater.onenote import sync_to_onenote
+            sync_to_onenote(items=[item])
+        except Exception as e:
+            print(f"  (OneNote sync failed: {e})")
+
     return item
 
 
