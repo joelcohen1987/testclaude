@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "readlater"
+version = "0.1.0"
+description = "Collect anything into a central PDF reading folder"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+# Pick your PDF renderer (at least one required)
+playwright = ["playwright"]
+weasyprint = ["weasyprint"]
+# For markdown conversion
+markdown = ["markdown"]
+# For image conversion
+images = ["Pillow"]
+# For Word doc conversion (needs system libreoffice too)
+# Everything
+all = ["playwright", "weasyprint", "markdown", "Pillow"]
+
+[project.scripts]
+readlater = "readlater.cli:main"
