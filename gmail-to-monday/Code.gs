@@ -77,9 +77,17 @@ function processNewEmails() {
     if (created) {
       Logger.log("  + " + subject + " [" + contentType + "]");
 
-      // If there are PDF attachments, add them as file updates
+      // Convert the email itself to PDF and upload it
+      const emailPdf = emailToPdf(firstMsg);
+      if (emailPdf) {
+        uploadFileToMondayItem(created, emailPdf);
+        Logger.log("    Uploaded email as PDF: " + emailPdf.getName());
+      }
+
+      // Also upload any PDF attachments from the email
       for (const pdf of pdfAttachments) {
-        addFileToMondayItem(created, pdf);
+        uploadFileToMondayItem(created, pdf);
+        Logger.log("    Uploaded attachment: " + pdf.getName());
       }
     } else {
       Logger.log("  ! Failed: " + subject);
@@ -139,19 +147,99 @@ function createMondayItem(title, contentType, sourceUrl, dateAdded) {
   return null;
 }
 
-function addFileToMondayItem(itemId, attachment) {
-  // Monday.com file upload requires multipart form data
-  // This adds a note with the filename instead (simpler, more reliable)
+function uploadFileToMondayItem(itemId, blob) {
+  // Monday.com file upload uses multipart form data to /v2/file
   const query =
-    'mutation ($itemId: ID!, $body: String!) { ' +
-    "create_update(item_id: $itemId, body: $body) { id } }";
+    'mutation ($file: File!) { add_file_to_update (item_id: ' +
+    itemId +
+    ', file: $file) { id } }';
 
-  const variables = {
-    itemId: itemId,
-    body: "PDF attachment: " + attachment.getName(),
+  const boundary = "----FormBoundary" + Utilities.getUuid();
+
+  // Build multipart payload as byte array
+  var pre =
+    "--" + boundary + "\r\n" +
+    'Content-Disposition: form-data; name="query"\r\n\r\n' +
+    query + "\r\n" +
+    "--" + boundary + "\r\n" +
+    'Content-Disposition: form-data; name="variables[file]"; filename="' +
+    blob.getName() + '"\r\n' +
+    "Content-Type: application/pdf\r\n\r\n";
+
+  var post = "\r\n--" + boundary + "--\r\n";
+
+  // Concatenate: pre bytes + file bytes + post bytes
+  var payload = Utilities.newBlob(pre)
+    .getBytes()
+    .concat(blob.getBytes())
+    .concat(Utilities.newBlob(post).getBytes());
+
+  var options = {
+    method: "post",
+    headers: {
+      Authorization: CONFIG.MONDAY_API_TOKEN,
+      "API-Version": "2024-10",
+    },
+    contentType: "multipart/form-data; boundary=" + boundary,
+    payload: payload,
+    muteHttpExceptions: true,
   };
 
-  mondayQuery(query, variables);
+  var response = UrlFetchApp.fetch(
+    "https://api.monday.com/v2/file",
+    options
+  );
+  var result = JSON.parse(response.getContentText());
+
+  if (result.errors) {
+    Logger.log(
+      "File upload error: " +
+        result.errors.map(function (e) { return e.message; }).join("; ")
+    );
+  }
+
+  return result;
+}
+
+function emailToPdf(message) {
+  // Convert a Gmail message into a clean PDF via Google Drive
+  var subject = message.getSubject() || "Untitled";
+  var from = message.getFrom();
+  var date = message.getDate();
+  var htmlBody = message.getBody() || "<p>(no content)</p>";
+
+  // Build a formatted HTML document
+  var html =
+    "<html><head>" +
+    '<meta charset="utf-8">' +
+    "<style>" +
+    "body { font-family: Arial, sans-serif; margin: 40px; color: #333; }" +
+    "h1 { font-size: 20px; margin-bottom: 4px; }" +
+    ".meta { color: #666; font-size: 13px; margin-bottom: 20px; }" +
+    "hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }" +
+    "img { max-width: 100%; }" +
+    "</style></head><body>" +
+    "<h1>" + escapeHtml(subject) + "</h1>" +
+    '<div class="meta">From: ' + escapeHtml(from) + "<br>" +
+    "Date: " + date.toLocaleString() + "</div>" +
+    "<hr>" +
+    htmlBody +
+    "</body></html>";
+
+  // Create temp HTML file in Drive, convert to PDF, then clean up
+  var tempFile = DriveApp.createFile(
+    subject + ".html",
+    html,
+    MimeType.HTML
+  );
+
+  var pdfBlob = tempFile.getAs(MimeType.PDF);
+  pdfBlob.setName(subject.replace(/[^a-zA-Z0-9 _-]/g, "") + ".pdf");
+
+  // Delete temp file
+  tempFile.setTrashed(true);
+
+  return pdfBlob;
 }
 
 function getColumnIds() {
@@ -242,6 +330,14 @@ function detectContentType(subject, body, url) {
 
   // Default to LINK
   return "LINK";
+}
+
+function escapeHtml(text) {
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
 }
 
 function getOrCreateLabel(name) {
