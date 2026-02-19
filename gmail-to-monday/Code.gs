@@ -33,8 +33,8 @@ const CONFIG = {
   // Anything else that lands in the inbox gets ignored.
   ALLOWED_SENDERS: [
     "joelcohen1987@gmail.com",
-    // Add more addresses here if needed, e.g.:
-    // "joel@workemail.com",
+    "joelcohen87@gmail.com",
+    "jcohen@mitimco.mit.edu",
   ],
 };
 
