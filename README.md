@@ -49,7 +49,48 @@ readlater email -p gmail -m 10
 readlater email --search '(FROM "newsletter@example.com")'
 ```
 
-### Email workflow tip
+### Forward-to-save (easiest email workflow)
+
+You don't need a new email address. Gmail and Outlook both let you forward emails to
+yourself with a special tag, and ReadLater will automatically pick them up.
+
+**Gmail — use the `+` trick:**
+
+Gmail ignores anything after a `+` in your address. So if your email is `jane@gmail.com`,
+then `jane+readlater@gmail.com` goes to the same inbox. Set up a filter once:
+
+1. In Gmail, go to Settings > Filters > Create new filter
+2. Set "To" to `yourname+readlater@gmail.com`
+3. Click "Create filter", check **Apply the label: ReadLater** and **Skip the inbox**
+4. Done!
+
+Now whenever you want to save an email: **forward it to `yourname+readlater@gmail.com`**.
+ReadLater will automatically find it and convert it to PDF.
+
+**Outlook:**
+
+Outlook supports `+` addressing too. Forward emails to `yourname+readlater@outlook.com`
+and set up a rule in Outlook to move those to a "ReadLater" folder.
+
+### Automatic checking
+
+Instead of manually running `readlater email`, you can have it check automatically:
+
+```bash
+# Check email every 5 minutes (also starts the Chrome extension server)
+readlater watch --with-server
+
+# Check every 2 minutes, Gmail only
+readlater watch -i 2 -p gmail
+
+# Set it to start automatically when your computer boots (never think about it again)
+readlater autostart install
+
+# To undo that
+readlater autostart uninstall
+```
+
+### Manual email workflow tip
 
 In Gmail, create a filter that applies the label `ReadLater` to emails you want to
 collect (newsletters, saved articles, etc). The tool will look for that label by default.

@@ -49,6 +49,16 @@ def main():
     serve_p = sub.add_parser("serve", help="Start the local server (needed for the Chrome extension)")
     serve_p.add_argument("--port", type=int, default=24247, help="Port to listen on (default: 24247)")
 
+    # --- readlater watch ---
+    watch_p = sub.add_parser("watch", help="Auto-check email every N minutes and save new items")
+    watch_p.add_argument("-i", "--interval", type=int, default=5, help="Minutes between checks (default: 5)")
+    watch_p.add_argument("-p", "--provider", choices=["gmail", "outlook"], help="Only watch this provider")
+    watch_p.add_argument("--with-server", action="store_true", help="Also start the Chrome extension server")
+
+    # --- readlater autostart ---
+    autostart_p = sub.add_parser("autostart", help="Set up ReadLater to run automatically when your computer starts")
+    autostart_p.add_argument("action", choices=["install", "uninstall", "status"], help="Install, uninstall, or check autostart status")
+
     args = parser.parse_args()
 
     if args.command is None:
@@ -69,6 +79,10 @@ def main():
         cmd_open(args)
     elif args.command == "serve":
         cmd_serve(args)
+    elif args.command == "watch":
+        cmd_watch(args)
+    elif args.command == "autostart":
+        cmd_autostart(args)
 
 
 def cmd_add(args):
@@ -177,6 +191,50 @@ def cmd_serve(args):
     from readlater.server import run_server
 
     run_server(port=args.port)
+
+
+def cmd_watch(args):
+    import time
+    from readlater.email_fetch import fetch_emails
+
+    interval = args.interval * 60  # convert to seconds
+    provider = args.provider
+
+    # Optionally start the Chrome extension server in a background thread
+    if args.with_server:
+        import threading
+        from readlater.server import run_server
+
+        t = threading.Thread(target=run_server, daemon=True)
+        t.start()
+        print()  # blank line after server startup message
+
+    print(f"Watching for new emails every {args.interval} minute(s).")
+    print(f"PDFs saved to: {get_reading_dir()}")
+    print("Press Ctrl+C to stop.\n")
+
+    try:
+        while True:
+            try:
+                saved = fetch_emails(provider=provider, max_emails=20)
+                if saved:
+                    print(f"  -> {len(saved)} new file(s) saved.\n")
+            except Exception as e:
+                print(f"  Error checking email: {e}\n")
+            time.sleep(interval)
+    except KeyboardInterrupt:
+        print("\nStopped watching.")
+
+
+def cmd_autostart(args):
+    from readlater.autostart import install_autostart, uninstall_autostart, check_autostart
+
+    if args.action == "install":
+        install_autostart()
+    elif args.action == "uninstall":
+        uninstall_autostart()
+    elif args.action == "status":
+        check_autostart()
 
 
 if __name__ == "__main__":
