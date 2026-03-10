@@ -202,6 +202,12 @@ RESEARCHED_FIRMS = {
         "description": "Explicitly value-oriented investment firm. $55M AUM.",
         "why_mit": "Name indicates value investing approach.",
     },
+    "RADAR EQUITIES LLC": {
+        "tier": 2, "match": "YES",
+        "strategy": "Concentrated Value Equity (LatAm)",
+        "description": "Concentrated portfolio of 7-15 positions in Brazilian/LatAm equities. Bottom-up, value-oriented, targeting mid/small-cap 'unpopular, boring, under-covered' names. Connected to 3G Capital lineage. $523M AUM.",
+        "why_mit": "Classic long-term, concentrated value equity approach. 3G Capital lineage. Strong co-investment alignment.",
+    },
 
     # ── TIER 3: MAYBE - Interesting but less clear alignment ────────────────
     "VITRUVIAN PARTNERS LLP": {
@@ -299,10 +305,10 @@ RESEARCHED_FIRMS = {
         "why_mit": "Equity-focused. Requires further diligence.",
     },
     "CRYDER CAPITAL": {
-        "tier": 2, "match": "MAYBE",
-        "strategy": "Equity (Global)",
-        "description": "London-based concentrated equity investor. $1.9B AUM.",
-        "why_mit": "Concentrated equity approach.",
+        "tier": 1, "match": "YES",
+        "strategy": "Concentrated Quality Equity (Global)",
+        "description": "London-based concentrated (10-20 positions), long-term investor in high-quality companies with strong competitive advantages and robust FCF. Targets ~15% compounding. Serves endowments and foundations. $30M minimum. $1.9B AUM.",
+        "why_mit": "Textbook match: concentrated, long-term, quality-focused, already serves endowments/foundations. Targets capital preservation plus compounding.",
     },
     "KEYSTONE INVESTORS PTE. LTD.": {
         "tier": 2, "match": "MAYBE",

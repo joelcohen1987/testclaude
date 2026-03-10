@@ -98,6 +98,22 @@
   {
     "rank": 7,
     "tier": 1,
+    "name": "CRYDER CAPITAL",
+    "strategy": "Concentrated Quality Equity (Global)",
+    "match_level": "YES",
+    "description": "London-based concentrated (10-20 positions), long-term investor in high-quality companies with strong competitive advantages and robust FCF. Targets ~15% compounding. Serves endowments and foundations. $30M minimum. $1.9B AUM.",
+    "why_mit": "Textbook match: concentrated, long-term, quality-focused, already serves endowments/foundations. Targets capital preservation plus compounding.",
+    "website": "https://www.linkedin.com/company/cryder-capital-partners-llp",
+    "aum_millions": 1905.2,
+    "fund_types": "Hedge(1)",
+    "location": "LONDON, United Kingdom",
+    "crd": "268801",
+    "sec_number": "802-128885",
+    "num_funds": "1"
+  },
+  {
+    "rank": 8,
+    "tier": 1,
     "name": "DYNAMO INTERNACIONAL",
     "strategy": "Value Equity (Brazil)",
     "match_level": "YES",
@@ -112,7 +128,7 @@
     "num_funds": "14"
   },
   {
-    "rank": 8,
+    "rank": 9,
     "tier": 1,
     "name": "GREENWOODS ASSET MANAGEMENT HONG KONG LIMITED",
     "strategy": "Fundamental Value Equity (China)",
@@ -128,7 +144,7 @@
     "num_funds": "2"
   },
   {
-    "rank": 9,
+    "rank": 10,
     "tier": 1,
     "name": "HHLR ADVISORS, LTD.",
     "strategy": "Long-term Fundamental Equity (Asia/Global)",
@@ -144,7 +160,7 @@
     "num_funds": "4"
   },
   {
-    "rank": 10,
+    "rank": 11,
     "tier": 1,
     "name": "JANCHOR PARTNERS",
     "strategy": "Long-term Industrialist Investor (Asia)",
@@ -160,7 +176,7 @@
     "num_funds": "6"
   },
   {
-    "rank": 11,
+    "rank": 12,
     "tier": 1,
     "name": "THELEME PARTNERS LLP",
     "strategy": "Concentrated Value Equity",
@@ -176,7 +192,7 @@
     "num_funds": "3"
   },
   {
-    "rank": 12,
+    "rank": 13,
     "tier": 1,
     "name": "WHITE OAK CAPITAL MANAGEMENT CONSULTANTS LLP",
     "strategy": "GARP / Quality Equity (India)",
@@ -192,7 +208,7 @@
     "num_funds": "4"
   },
   {
-    "rank": 13,
+    "rank": 14,
     "tier": 2,
     "name": "ACTIVE OWNERSHIP CORPORATION S.\u00c0 R.L.",
     "strategy": "Activist Value Equity (Europe)",
@@ -208,7 +224,7 @@
     "num_funds": "2"
   },
   {
-    "rank": 14,
+    "rank": 15,
     "tier": 2,
     "name": "AGAVE CAPITAL MANAGEMENT LIMITED",
     "strategy": "Equity",
@@ -224,7 +240,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 15,
+    "rank": 16,
     "tier": 2,
     "name": "BFAM PARTNERS (HONG KONG) LIMITED",
     "strategy": "Equity (Asia)",
@@ -240,7 +256,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 16,
+    "rank": 17,
     "tier": 2,
     "name": "BLACK BEAR VALUE PARTNERS, LP",
     "strategy": "Value-Oriented Multi-Asset",
@@ -256,7 +272,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 17,
+    "rank": 18,
     "tier": 2,
     "name": "BLUE DIAMOND ASSET MANAGEMENT AG",
     "strategy": "Equity",
@@ -272,7 +288,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 18,
+    "rank": 19,
     "tier": 2,
     "name": "CHARLES-LIM CAPITAL LIMITED",
     "strategy": "Fundamental Equity (Asia)",
@@ -288,7 +304,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 19,
+    "rank": 20,
     "tier": 2,
     "name": "CLOUDALPHA CAPITAL MANAGEMENT LIMITED",
     "strategy": "L/S Equity (Global TMT)",
@@ -304,7 +320,7 @@
     "num_funds": "2"
   },
   {
-    "rank": 20,
+    "rank": 21,
     "tier": 2,
     "name": "COREVIEW CAPITAL MANAGEMENT LIMITED",
     "strategy": "Concentrated Equity (China/Asia Tech)",
@@ -320,7 +336,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 21,
+    "rank": 22,
     "tier": 2,
     "name": "COVALIS CAPITAL LLP",
     "strategy": "Equity",
@@ -336,7 +352,7 @@
     "num_funds": "3"
   },
   {
-    "rank": 22,
+    "rank": 23,
     "tier": 2,
     "name": "CRAKE ASSET MANAGEMENT",
     "strategy": "Concentrated Long/Short Equity",
@@ -349,22 +365,6 @@
     "location": "LONDON, United Kingdom",
     "crd": "304493",
     "sec_number": "802-117150",
-    "num_funds": "1"
-  },
-  {
-    "rank": 23,
-    "tier": 2,
-    "name": "CRYDER CAPITAL",
-    "strategy": "Equity (Global)",
-    "match_level": "MAYBE",
-    "description": "London-based concentrated equity investor. $1.9B AUM.",
-    "why_mit": "Concentrated equity approach.",
-    "website": "https://www.linkedin.com/company/cryder-capital-partners-llp",
-    "aum_millions": 1905.2,
-    "fund_types": "Hedge(1)",
-    "location": "LONDON, United Kingdom",
-    "crd": "268801",
-    "sec_number": "802-128885",
     "num_funds": "1"
   },
   {
@@ -786,6 +786,22 @@
   {
     "rank": 50,
     "tier": 2,
+    "name": "RADAR EQUITIES LLC",
+    "strategy": "Concentrated Value Equity (LatAm)",
+    "match_level": "YES",
+    "description": "Concentrated portfolio of 7-15 positions in Brazilian/LatAm equities. Bottom-up, value-oriented, targeting mid/small-cap 'unpopular, boring, under-covered' names. Connected to 3G Capital lineage. $523M AUM.",
+    "why_mit": "Classic long-term, concentrated value equity approach. 3G Capital lineage. Strong co-investment alignment.",
+    "website": "https://radarasset.com/",
+    "aum_millions": 523.1,
+    "fund_types": "Hedge(2)",
+    "location": "RIO DE JANEIRO, Brazil",
+    "crd": "324793",
+    "sec_number": "802-127634",
+    "num_funds": "2"
+  },
+  {
+    "rank": 51,
+    "tier": 2,
     "name": "RED OAK PARTNERS, LLC",
     "strategy": "Small-Cap Value / Activist",
     "match_level": "YES",
@@ -800,7 +816,7 @@
     "num_funds": "3"
   },
   {
-    "rank": 51,
+    "rank": 52,
     "tier": 2,
     "name": "SSVL (MONACO) S.A.M.",
     "strategy": "Value Equity",
@@ -816,7 +832,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 52,
+    "rank": 53,
     "tier": 2,
     "name": "TRESIDOR INVESTMENT MANAGEMENT LLP",
     "strategy": "Equity (Global)",
@@ -832,7 +848,7 @@
     "num_funds": "2"
   },
   {
-    "rank": 53,
+    "rank": 54,
     "tier": 2,
     "name": "TYBOURNE CAPITAL MANAGEMENT (HK) LTD",
     "strategy": "Growth Equity (Asia)",
@@ -848,7 +864,7 @@
     "num_funds": "7"
   },
   {
-    "rank": 54,
+    "rank": 55,
     "tier": 2,
     "name": "VALUEQUEST CAPITAL MANAGEMENT LIMITED",
     "strategy": "Value Equity (India)",
@@ -864,7 +880,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 55,
+    "rank": 56,
     "tier": 2,
     "name": "VELT PARTNERS INVESTIMENTOS LTDA.",
     "strategy": "Long-term Quality Equity (Brazil)",
@@ -880,7 +896,7 @@
     "num_funds": "5"
   },
   {
-    "rank": 56,
+    "rank": 57,
     "tier": 2,
     "name": "VOR CAPITAL LLP",
     "strategy": "Concentrated Equity (Internet/Consumer)",
@@ -896,7 +912,7 @@
     "num_funds": "4"
   },
   {
-    "rank": 57,
+    "rank": 58,
     "tier": 2,
     "name": "WELWING CAPITAL GROUP LIMITED",
     "strategy": "Equity (Asia)",
@@ -912,7 +928,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 58,
+    "rank": 59,
     "tier": 3,
     "name": "ALL-STARS INVESTMENT LIMITED",
     "strategy": "Multi-Strategy (China)",
@@ -928,7 +944,7 @@
     "num_funds": "6"
   },
   {
-    "rank": 59,
+    "rank": 60,
     "tier": 3,
     "name": "ARKENSTONE LLP",
     "strategy": "Equity/PE Mix",
@@ -944,7 +960,7 @@
     "num_funds": "3"
   },
   {
-    "rank": 60,
+    "rank": 61,
     "tier": 3,
     "name": "ATTESTOR LIMITED",
     "strategy": "Credit / Special Situations",
@@ -960,7 +976,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 61,
+    "rank": 62,
     "tier": 3,
     "name": "BOYU CAPITAL MANAGEMENT (SINGAPORE) PTE. LTD.",
     "strategy": "Growth PE (China/Asia)",
@@ -976,7 +992,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 62,
+    "rank": 63,
     "tier": 3,
     "name": "NAVIS CAPITAL",
     "strategy": "PE Buyout (Asia)",
@@ -992,7 +1008,7 @@
     "num_funds": "26"
   },
   {
-    "rank": 63,
+    "rank": 64,
     "tier": 3,
     "name": "PERMIRA INVESTMENT ADVISERS LIMITED",
     "strategy": "Large-Cap PE Buyout",
@@ -1008,7 +1024,7 @@
     "num_funds": "59"
   },
   {
-    "rank": 64,
+    "rank": 65,
     "tier": 3,
     "name": "VITRUVIAN PARTNERS LLP",
     "strategy": "Growth PE Buyout",
@@ -1024,7 +1040,7 @@
     "num_funds": "19"
   },
   {
-    "rank": 65,
+    "rank": 66,
     "tier": 3,
     "name": "ENDURING EQUITY HOLDINGS, LLC",
     "strategy": "Value-oriented (name signal)",
@@ -1040,7 +1056,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 66,
+    "rank": 67,
     "tier": 3,
     "name": "PRIVATE VALUE MANAGEMENT, LP",
     "strategy": "Value-oriented (name signal)",
