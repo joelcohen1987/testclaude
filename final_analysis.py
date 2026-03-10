@@ -431,12 +431,7 @@ RESEARCHED_FIRMS = {
         "why_mit": "Value orientation.",
     },
     # MELODY CAPITAL PARTNERS removed - confirmed as private credit in wind-down
-    "CONGRUENT INVESTMENT PARTNERS, LLC": {
-        "tier": 3, "match": "MAYBE",
-        "strategy": "Equity/PE",
-        "description": "Investment firm with hedge and PE funds. $120M AUM.",
-        "why_mit": "Mixed equity/PE approach.",
-    },
+    # CONGRUENT INVESTMENT PARTNERS removed - confirmed as PE buyout, not value equity
     "ALL-STARS INVESTMENT LIMITED": {
         "tier": 3, "match": "MAYBE",
         "strategy": "Multi-Strategy (China)",
@@ -466,6 +461,7 @@ RESEARCHED_FIRMS = {
     "ORCHARD GLOBAL ASSET MANAGEMENT (S) PTE LTD": {"tier": 99, "match": "NO", "strategy": "Structured Credit", "description": "Structured credit, CLOs, bank capital.", "why_mit": "N/A"},
     "SPARTA CAPITAL MANAGEMENT LTD": {"tier": 99, "match": "NO", "strategy": "Event-Driven", "description": "Ex-Elliott. Event-driven activist, multi-strategy.", "why_mit": "N/A"},
     "OPEN FOREST ASSET MANAGEMENT, LLC": {"tier": 99, "match": "NO", "strategy": "Fund of Funds", "description": "Value fund of hedge funds. Limited info.", "why_mit": "N/A"},
+    "CONGRUENT INVESTMENT PARTNERS, LLC": {"tier": 99, "match": "NO", "strategy": "PE Buyout", "description": "PE buyout firm, not value equity.", "why_mit": "N/A"},
 }
 
 

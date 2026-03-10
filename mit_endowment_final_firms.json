@@ -962,22 +962,6 @@
   {
     "rank": 61,
     "tier": 3,
-    "name": "CONGRUENT INVESTMENT PARTNERS, LLC",
-    "strategy": "Equity/PE",
-    "match_level": "MAYBE",
-    "description": "Investment firm with hedge and PE funds. $120M AUM.",
-    "why_mit": "Mixed equity/PE approach.",
-    "website": "HTTP://WWW.CONGRUENTINV.COM",
-    "aum_millions": 120.3,
-    "fund_types": "Hedge(1), PE(4)",
-    "location": "DALLAS, TX",
-    "crd": "155803",
-    "sec_number": "802-124846",
-    "num_funds": "5"
-  },
-  {
-    "rank": 62,
-    "tier": 3,
     "name": "NAVIS CAPITAL",
     "strategy": "PE Buyout (Asia)",
     "match_level": "MAYBE",
@@ -992,7 +976,7 @@
     "num_funds": "26"
   },
   {
-    "rank": 63,
+    "rank": 62,
     "tier": 3,
     "name": "PERMIRA INVESTMENT ADVISERS LIMITED",
     "strategy": "Large-Cap PE Buyout",
@@ -1008,7 +992,7 @@
     "num_funds": "59"
   },
   {
-    "rank": 64,
+    "rank": 63,
     "tier": 3,
     "name": "VITRUVIAN PARTNERS LLP",
     "strategy": "Growth PE Buyout",
@@ -1024,7 +1008,7 @@
     "num_funds": "19"
   },
   {
-    "rank": 65,
+    "rank": 64,
     "tier": 3,
     "name": "ENDURING EQUITY HOLDINGS, LLC",
     "strategy": "Value-oriented (name signal)",
@@ -1040,7 +1024,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 66,
+    "rank": 65,
     "tier": 3,
     "name": "PRIVATE VALUE MANAGEMENT, LP",
     "strategy": "Value-oriented (name signal)",
