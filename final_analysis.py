@@ -209,6 +209,12 @@ RESEARCHED_FIRMS = {
         "description": "London-based, 100% partner-owned (MBO from Dynamo Capital 2005). Concentrated portfolio of up to 20 companies in Americas and Europe. Focuses on Market Power, Reinvestment Opportunity, and Founder Mindset. Low turnover, long-term compounding. $504M AUM.",
         "why_mit": "Textbook quality/value compounder. Focus on durable competitive advantages, reinvestment capacity, and owner-operator culture.",
     },
+    "ARCUS INVESTMENT LIMITED": {
+        "tier": 2, "match": "YES",
+        "strategy": "Value Equity (Japan)",
+        "description": "Japan-only value equity specialist (long-only and long/short). Founded 1998. Proprietary multi-factor scoring plus fundamental analysis. 25+ year track record. Beneficiary of Japan corporate governance reform. $2.5B AUM.",
+        "why_mit": "Disciplined Japan value investor with 25+ year track record. Long-only and long/short.",
+    },
 
     # ── TIER 3: MAYBE - Interesting but less clear alignment ────────────────
     "VITRUVIAN PARTNERS LLP": {
@@ -380,23 +386,18 @@ RESEARCHED_FIRMS = {
         "why_mit": "Asia equity focus with significant AUM.",
     },
     "PERSEVERANCE ASSET MANAGEMENT INTERNATIONAL (SINGAPORE) PTE. LTD": {
-        "tier": 2, "match": "MAYBE",
-        "strategy": "Equity (Asia)",
-        "description": "Singapore-based Asia equity investor. $1.2B AUM.",
-        "why_mit": "Asia equity focus.",
+        "tier": 2, "match": "YES",
+        "strategy": "Value Equity (China)",
+        "description": "China's leading public equity manager. Multi-PM platform with deep value, contrarian, and growth PMs in Greater China equities. Long-only/long-bias. Institutional quality. $1.2B intl AUM.",
+        "why_mit": "Leading China public equity platform with value and fundamental orientation. Long-only/long-bias.",
     },
     "OLP CAPITAL MANAGEMENT LIMITED": {
-        "tier": 2, "match": "MAYBE",
-        "strategy": "Equity (China)",
-        "description": "Oceanlink. China equity focused. $1.9B AUM.",
-        "why_mit": "China equity focus with meaningful AUM.",
+        "tier": 2, "match": "YES",
+        "strategy": "Concentrated Quality Equity (China)",
+        "description": "Oceanlink. Concentrated (~10 positions), long-term, research-intensive investor in high-quality businesses. Public and private, China-focused. Ex-Harris Associates (Oakmark) pedigree. $1.9B AUM.",
+        "why_mit": "Highly concentrated, long-term owner's mindset. Harris Associates (value) DNA. Quality-focused.",
     },
-    "BFAM PARTNERS (HONG KONG) LIMITED": {
-        "tier": 2, "match": "MAYBE",
-        "strategy": "Equity (Asia)",
-        "description": "HK-based Asia equity hedge fund. $1.1B AUM.",
-        "why_mit": "Asia equity focus.",
-    },
+    # BFAM PARTNERS removed - confirmed multi-asset trading (credit, convertibles, rates, vol), not equity value
     "GENESEE VALUE MANAGEMENT, LLC": {
         "tier": 2, "match": "YES",
         "strategy": "Value Equity",
@@ -467,6 +468,8 @@ RESEARCHED_FIRMS = {
     "AQUAMARINE FINANCIAL (CAYMAN) LTD": {"tier": 99, "match": "NO", "strategy": "Value Equity (Winding Down)", "description": "Guy Spier Buffett-style fund winding down 2025, converting to family office.", "why_mit": "N/A"},
     "ATTESTOR LIMITED": {"tier": 99, "match": "NO", "strategy": "Credit/Distressed", "description": "European distressed debt and special situations. $9.5B AUM.", "why_mit": "N/A"},
     "BOYU CAPITAL MANAGEMENT (SINGAPORE) PTE. LTD.": {"tier": 99, "match": "NO", "strategy": "PE Buyout (China)", "description": "China-focused PE growth buyout. Notable deals: Alibaba, Starbucks China.", "why_mit": "N/A"},
+    "BFAM PARTNERS (HONG KONG) LIMITED": {"tier": 99, "match": "NO", "strategy": "Multi-Asset Trading", "description": "Multi-asset trading: credit, convertibles, rates, equities, vol. Ex-Nomura prop.", "why_mit": "N/A"},
+    "PINPOINT ASSET MANAGEMENT LTD": {"tier": 99, "match": "NO", "strategy": "Multi-Strategy", "description": "Multi-manager multi-strategy platform, Asian markets.", "why_mit": "N/A"},
 }
 
 
