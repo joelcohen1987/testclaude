@@ -86,12 +86,7 @@ RESEARCHED_FIRMS = {
         "description": "Singapore-based India-focused long-term equity investor. 3-year lock-up. Bottom-up, quality-focused. Founded by Akash Prakash (ex-Temasek, GIC). $3.8B AUM.",
         "why_mit": "Strong pedigree, long-term lock-up structure, quality-focused fundamental India equity investing.",
     },
-    "AQUAMARINE FINANCIAL (CAYMAN) LTD": {
-        "tier": 1, "match": "YES",
-        "strategy": "Concentrated Value Equity (Buffett-style)",
-        "description": "Zurich-based Buffett partnership-style fund managed by Guy Spier. Author of 'The Education of a Value Investor'. Concentrated in Berkshire, AXP, MA, Ferrari. $1.3B AUM.",
-        "why_mit": "Pure Buffett-style value investing. Highly concentrated in quality compounders.",
-    },
+    # AQUAMARINE FINANCIAL removed - Guy Spier winding down fund and converting to family office (2025)
     "ASPEX MANAGEMENT (HK) LIMITED": {
         "tier": 1, "match": "YES",
         "strategy": "Long-term Fundamental Equity (Pan-Asia)",
@@ -119,9 +114,9 @@ RESEARCHED_FIRMS = {
         "why_mit": "Quality-focused, long-term Brazil equity with emphasis on good management and financial discipline.",
     },
     "HELIKON INVESTMENTS LIMITED": {
-        "tier": 2, "match": "YES",
-        "strategy": "Contrarian Value Equity (Global)",
-        "description": "London-based global equity investor. Fundamental, research-intensive, concentrated portfolio. Known for contrarian bets on undervalued equities. $6.6B AUM.",
+        "tier": 2, "match": "MAYBE",
+        "strategy": "Opportunistic Value Equity (Global)",
+        "description": "London-based global opportunistic equity L/S. Fundamental, concentrated (~18 positions). Holdings span mining/resources, airports, hospitality. Founded 2019. $6.6B AUM.",
         "why_mit": "Fundamental, contrarian value approach with concentrated positions.",
     },
     "EAGLE VALUE PARTNERS, LLC": {
@@ -149,9 +144,9 @@ RESEARCHED_FIRMS = {
         "why_mit": "Value-driven with strong alignment of interests. Private equity mindset applied to public markets.",
     },
     "PALLISER CAPITAL (UK) LTD": {
-        "tier": 2, "match": "YES",
-        "strategy": "Activist Value (Global)",
-        "description": "London-based activist value investor. Founded by James Smith (ex-Elliott). Targets undervalued companies globally. Notable campaigns: WH Smith, LG Chem, Toto. $1.1B AUM.",
+        "tier": 3, "match": "MAYBE",
+        "strategy": "Activist (Global)",
+        "description": "London-based activist fund. Founded by James Smith (ex-Elliott, 20 years). Short-duration catalyst-driven campaigns: SK Square, WHSmith, Pendragon. $1.1B AUM.",
         "why_mit": "Value-oriented activist with global reach. Patient, constructive activism to unlock value.",
     },
     "HENGISTBURY INVESTMENT PARTNERS LLP": {
@@ -208,6 +203,12 @@ RESEARCHED_FIRMS = {
         "description": "Concentrated portfolio of 7-15 positions in Brazilian/LatAm equities. Bottom-up, value-oriented, targeting mid/small-cap 'unpopular, boring, under-covered' names. Connected to 3G Capital lineage. $523M AUM.",
         "why_mit": "Classic long-term, concentrated value equity approach. 3G Capital lineage. Strong co-investment alignment.",
     },
+    "ZENO EQUITY PARTNERS LLP": {
+        "tier": 2, "match": "YES",
+        "strategy": "Concentrated Quality Equity (Global)",
+        "description": "London-based, 100% partner-owned (MBO from Dynamo Capital 2005). Concentrated portfolio of up to 20 companies in Americas and Europe. Focuses on Market Power, Reinvestment Opportunity, and Founder Mindset. Low turnover, long-term compounding. $504M AUM.",
+        "why_mit": "Textbook quality/value compounder. Focus on durable competitive advantages, reinvestment capacity, and owner-operator culture.",
+    },
 
     # ── TIER 3: MAYBE - Interesting but less clear alignment ────────────────
     "VITRUVIAN PARTNERS LLP": {
@@ -216,12 +217,7 @@ RESEARCHED_FIRMS = {
         "description": "Global PE firm focused on growth buyouts in tech, financial services, healthcare, business services. $22.7B AUM. Top-decile returns.",
         "why_mit": "Quality growth focus, but PE buyout model rather than public equity value.",
     },
-    "ATTESTOR LIMITED": {
-        "tier": 3, "match": "MAYBE",
-        "strategy": "Credit / Special Situations",
-        "description": "European credit and special situations investor. Patient capital, value-add approach. 'Baupost-like' flexible mandate. $9.5B AUM.",
-        "why_mit": "Value-oriented but in credit/special situations, not equity. Interesting as a diversifier.",
-    },
+    # ATTESTOR LIMITED removed - confirmed credit/distressed debt, not equity value investing
     "NAVIS CAPITAL": {
         "tier": 3, "match": "MAYBE",
         "strategy": "PE Buyout (Asia)",
@@ -234,12 +230,7 @@ RESEARCHED_FIRMS = {
         "description": "Global PE firm focused on technology, consumer, healthcare, services. $68.3B AUM.",
         "why_mit": "Large, well-regarded PE firm but not public equity value investing.",
     },
-    "BOYU CAPITAL MANAGEMENT (SINGAPORE) PTE. LTD.": {
-        "tier": 3, "match": "MAYBE",
-        "strategy": "Growth PE (China/Asia)",
-        "description": "China-focused PE growth investor. $1.2B AUM (much larger overall). Notable deals include Alibaba, Starbucks China.",
-        "why_mit": "Strong deal-making in Asia but political concerns and growth (not value) focus.",
-    },
+    # BOYU CAPITAL removed - confirmed PE buyout, not public equity value investing
     "KITE LAKE CAPITAL MANAGEMENT (UK) LLP": {
         "tier": 3, "match": "NO",
         "strategy": "Event-Driven",
@@ -406,12 +397,6 @@ RESEARCHED_FIRMS = {
         "description": "HK-based Asia equity hedge fund. $1.1B AUM.",
         "why_mit": "Asia equity focus.",
     },
-    "BOYU CAPITAL MANAGEMENT (SINGAPORE) PTE. LTD.": {
-        "tier": 3, "match": "MAYBE",
-        "strategy": "Growth PE (China/Asia)",
-        "description": "China-focused PE growth investor. Notable deals: Alibaba, Starbucks China. $1.2B AUM (much larger overall).",
-        "why_mit": "Strong deal-making in Asia. Long-term growth orientation.",
-    },
     "GENESEE VALUE MANAGEMENT, LLC": {
         "tier": 2, "match": "YES",
         "strategy": "Value Equity",
@@ -479,6 +464,9 @@ RESEARCHED_FIRMS = {
     "AMBIENTA SGR S.P.A.": {"tier": 99, "match": "NO", "strategy": "PE Buyout (Sustainability)", "description": "Environmental sustainability PE. European SME buyouts. $4.5B AUM.", "why_mit": "N/A"},
     "AMIA CAPITAL LLP": {"tier": 99, "match": "NO", "strategy": "Global Macro", "description": "Discretionary global macro. Ex-BTG Pactual. $5.7B AUM.", "why_mit": "N/A"},
     "GEMSSTOCK LTD": {"tier": 99, "match": "NO", "strategy": "Global Macro", "description": "Discretionary global macro with EM emphasis. $3.7B AUM.", "why_mit": "N/A"},
+    "AQUAMARINE FINANCIAL (CAYMAN) LTD": {"tier": 99, "match": "NO", "strategy": "Value Equity (Winding Down)", "description": "Guy Spier Buffett-style fund winding down 2025, converting to family office.", "why_mit": "N/A"},
+    "ATTESTOR LIMITED": {"tier": 99, "match": "NO", "strategy": "Credit/Distressed", "description": "European distressed debt and special situations. $9.5B AUM.", "why_mit": "N/A"},
+    "BOYU CAPITAL MANAGEMENT (SINGAPORE) PTE. LTD.": {"tier": 99, "match": "NO", "strategy": "PE Buyout (China)", "description": "China-focused PE growth buyout. Notable deals: Alibaba, Starbucks China.", "why_mit": "N/A"},
 }
 
 
