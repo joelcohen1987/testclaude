@@ -180,9 +180,15 @@ RESEARCHED_FIRMS = {
     },
     "FAIR VALUE CAPITAL MANAGEMENT": {
         "tier": 2, "match": "YES",
-        "strategy": "Value Equity",
-        "description": "Name signals explicit value orientation. Hedge fund with value-focused approach. $107M AUM.",
-        "why_mit": "Explicitly value-focused investment manager.",
+        "strategy": "Value Equity (India)",
+        "description": "India-focused long-term value investor. Bottom-up, fundamental research-driven. Founded by Rakshit Sethi. Incorporates behavioral finance. 20+ year track record. $107M AUM.",
+        "why_mit": "Explicitly value-focused, long-term fundamental investor in Indian equities.",
+    },
+    "KONTIKI CAPITAL MANAGEMENT (HK) LIMITED": {
+        "tier": 2, "match": "YES",
+        "strategy": "Concentrated Quality Equity (EM)",
+        "description": "Hong Kong-based fundamental equity investor. Concentrated, high-conviction (8 positions). Owner mindset with deep research on moats and management quality. Holdings in quality EM businesses (Nu, HDFC Bank, Sea, H World). $3B AUM.",
+        "why_mit": "Owner-oriented, fundamental, moat-focused investing in quality businesses. Highly concentrated.",
     },
     "LIMESTONE VALUE PARTNERS, LLC": {
         "tier": 2, "match": "YES",
@@ -462,6 +468,11 @@ RESEARCHED_FIRMS = {
     "SPARTA CAPITAL MANAGEMENT LTD": {"tier": 99, "match": "NO", "strategy": "Event-Driven", "description": "Ex-Elliott. Event-driven activist, multi-strategy.", "why_mit": "N/A"},
     "OPEN FOREST ASSET MANAGEMENT, LLC": {"tier": 99, "match": "NO", "strategy": "Fund of Funds", "description": "Value fund of hedge funds. Limited info.", "why_mit": "N/A"},
     "CONGRUENT INVESTMENT PARTNERS, LLC": {"tier": 99, "match": "NO", "strategy": "PE Buyout", "description": "PE buyout firm, not value equity.", "why_mit": "N/A"},
+    "TAIREN CAPITAL LIMITED": {"tier": 99, "match": "NO", "strategy": "L/S Equity + Crypto", "description": "Greater China L/S equity with crypto ETF exposure and buyout investments. Not aligned.", "why_mit": "N/A"},
+    "ARCM (ASIA RESEARCH AND CAPITAL MANAGEMENT)": {"tier": 99, "match": "NO", "strategy": "Distressed Debt", "description": "Asia distressed debt investing. $2.9B AUM.", "why_mit": "N/A"},
+    "AMBIENTA SGR S.P.A.": {"tier": 99, "match": "NO", "strategy": "PE Buyout (Sustainability)", "description": "Environmental sustainability PE. European SME buyouts. $4.5B AUM.", "why_mit": "N/A"},
+    "AMIA CAPITAL LLP": {"tier": 99, "match": "NO", "strategy": "Global Macro", "description": "Discretionary global macro. Ex-BTG Pactual. $5.7B AUM.", "why_mit": "N/A"},
+    "GEMSSTOCK LTD": {"tier": 99, "match": "NO", "strategy": "Global Macro", "description": "Discretionary global macro with EM emphasis. $3.7B AUM.", "why_mit": "N/A"},
 }
 
 

@@ -419,10 +419,10 @@
     "rank": 27,
     "tier": 2,
     "name": "FAIR VALUE CAPITAL MANAGEMENT",
-    "strategy": "Value Equity",
+    "strategy": "Value Equity (India)",
     "match_level": "YES",
-    "description": "Name signals explicit value orientation. Hedge fund with value-focused approach. $107M AUM.",
-    "why_mit": "Explicitly value-focused investment manager.",
+    "description": "India-focused long-term value investor. Bottom-up, fundamental research-driven. Founded by Rakshit Sethi. Incorporates behavioral finance. 20+ year track record. $107M AUM.",
+    "why_mit": "Explicitly value-focused, long-term fundamental investor in Indian equities.",
     "website": "https://fairvaluecap.com/",
     "aum_millions": 106.6,
     "fund_types": "Hedge(1)",
@@ -610,6 +610,22 @@
   {
     "rank": 39,
     "tier": 2,
+    "name": "KONTIKI CAPITAL MANAGEMENT (HK) LIMITED",
+    "strategy": "Concentrated Quality Equity (EM)",
+    "match_level": "YES",
+    "description": "Hong Kong-based fundamental equity investor. Concentrated, high-conviction (8 positions). Owner mindset with deep research on moats and management quality. Holdings in quality EM businesses (Nu, HDFC Bank, Sea, H World). $3B AUM.",
+    "why_mit": "Owner-oriented, fundamental, moat-focused investing in quality businesses. Highly concentrated.",
+    "website": "https://www.kontikicap.com",
+    "aum_millions": 2950.7,
+    "fund_types": "Hedge(3)",
+    "location": "HONG KONG, Hong Kong",
+    "crd": "172145",
+    "sec_number": "802-80158",
+    "num_funds": "3"
+  },
+  {
+    "rank": 40,
+    "tier": 2,
     "name": "LANDMARK VALUE INVESTMENTS",
     "strategy": "Value Investing",
     "match_level": "YES",
@@ -624,7 +640,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 40,
+    "rank": 41,
     "tier": 2,
     "name": "LIMESTONE VALUE PARTNERS, LLC",
     "strategy": "Value Equity",
@@ -640,7 +656,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 41,
+    "rank": 42,
     "tier": 2,
     "name": "LONG CORRIDOR ASSET MANAGEMENT LIMITED",
     "strategy": "Cross-Asset (Asia/China)",
@@ -656,7 +672,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 42,
+    "rank": 43,
     "tier": 2,
     "name": "NINE MASTS CAPITAL LIMITED",
     "strategy": "Equity (Asia)",
@@ -672,7 +688,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 43,
+    "rank": 44,
     "tier": 2,
     "name": "OLESEN CAPITAL MANAGEMENT LLC",
     "strategy": "Value Equity",
@@ -688,7 +704,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 44,
+    "rank": 45,
     "tier": 2,
     "name": "OLP CAPITAL MANAGEMENT LIMITED",
     "strategy": "Equity (China)",
@@ -704,7 +720,7 @@
     "num_funds": "2"
   },
   {
-    "rank": 45,
+    "rank": 46,
     "tier": 2,
     "name": "OVATA CAPITAL MANAGEMENT LIMITED",
     "strategy": "Equity (Asia)",
@@ -720,7 +736,7 @@
     "num_funds": "3"
   },
   {
-    "rank": 46,
+    "rank": 47,
     "tier": 2,
     "name": "OXBOW CAPITAL MANAGEMENT (HK) LIMITED",
     "strategy": "Fundamental Equity (Asia)",
@@ -736,7 +752,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 47,
+    "rank": 48,
     "tier": 2,
     "name": "PALLISER CAPITAL (UK) LTD",
     "strategy": "Activist Value (Global)",
@@ -752,7 +768,7 @@
     "num_funds": "2"
   },
   {
-    "rank": 48,
+    "rank": 49,
     "tier": 2,
     "name": "PERSEVERANCE ASSET MANAGEMENT INTERNATIONAL (SINGAPORE) PTE. LTD",
     "strategy": "Equity (Asia)",
@@ -768,7 +784,7 @@
     "num_funds": "2"
   },
   {
-    "rank": 49,
+    "rank": 50,
     "tier": 2,
     "name": "RED OAK PARTNERS, LLC",
     "strategy": "Small-Cap Value / Activist",
@@ -784,7 +800,7 @@
     "num_funds": "3"
   },
   {
-    "rank": 50,
+    "rank": 51,
     "tier": 2,
     "name": "SSVL (MONACO) S.A.M.",
     "strategy": "Value Equity",
@@ -800,7 +816,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 51,
+    "rank": 52,
     "tier": 2,
     "name": "TRESIDOR INVESTMENT MANAGEMENT LLP",
     "strategy": "Equity (Global)",
@@ -816,7 +832,7 @@
     "num_funds": "2"
   },
   {
-    "rank": 52,
+    "rank": 53,
     "tier": 2,
     "name": "TYBOURNE CAPITAL MANAGEMENT (HK) LTD",
     "strategy": "Growth Equity (Asia)",
@@ -832,7 +848,7 @@
     "num_funds": "7"
   },
   {
-    "rank": 53,
+    "rank": 54,
     "tier": 2,
     "name": "VALUEQUEST CAPITAL MANAGEMENT LIMITED",
     "strategy": "Value Equity (India)",
@@ -848,7 +864,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 54,
+    "rank": 55,
     "tier": 2,
     "name": "VELT PARTNERS INVESTIMENTOS LTDA.",
     "strategy": "Long-term Quality Equity (Brazil)",
@@ -864,7 +880,7 @@
     "num_funds": "5"
   },
   {
-    "rank": 55,
+    "rank": 56,
     "tier": 2,
     "name": "VOR CAPITAL LLP",
     "strategy": "Concentrated Equity (Internet/Consumer)",
@@ -880,7 +896,7 @@
     "num_funds": "4"
   },
   {
-    "rank": 56,
+    "rank": 57,
     "tier": 2,
     "name": "WELWING CAPITAL GROUP LIMITED",
     "strategy": "Equity (Asia)",
@@ -896,7 +912,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 57,
+    "rank": 58,
     "tier": 3,
     "name": "ALL-STARS INVESTMENT LIMITED",
     "strategy": "Multi-Strategy (China)",
@@ -912,7 +928,7 @@
     "num_funds": "6"
   },
   {
-    "rank": 58,
+    "rank": 59,
     "tier": 3,
     "name": "ARKENSTONE LLP",
     "strategy": "Equity/PE Mix",
@@ -928,7 +944,7 @@
     "num_funds": "3"
   },
   {
-    "rank": 59,
+    "rank": 60,
     "tier": 3,
     "name": "ATTESTOR LIMITED",
     "strategy": "Credit / Special Situations",
@@ -944,7 +960,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 60,
+    "rank": 61,
     "tier": 3,
     "name": "BOYU CAPITAL MANAGEMENT (SINGAPORE) PTE. LTD.",
     "strategy": "Growth PE (China/Asia)",
@@ -960,7 +976,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 61,
+    "rank": 62,
     "tier": 3,
     "name": "NAVIS CAPITAL",
     "strategy": "PE Buyout (Asia)",
@@ -976,7 +992,7 @@
     "num_funds": "26"
   },
   {
-    "rank": 62,
+    "rank": 63,
     "tier": 3,
     "name": "PERMIRA INVESTMENT ADVISERS LIMITED",
     "strategy": "Large-Cap PE Buyout",
@@ -992,7 +1008,7 @@
     "num_funds": "59"
   },
   {
-    "rank": 63,
+    "rank": 64,
     "tier": 3,
     "name": "VITRUVIAN PARTNERS LLP",
     "strategy": "Growth PE Buyout",
@@ -1008,7 +1024,7 @@
     "num_funds": "19"
   },
   {
-    "rank": 64,
+    "rank": 65,
     "tier": 3,
     "name": "ENDURING EQUITY HOLDINGS, LLC",
     "strategy": "Value-oriented (name signal)",
@@ -1024,7 +1040,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 65,
+    "rank": 66,
     "tier": 3,
     "name": "PRIVATE VALUE MANAGEMENT, LP",
     "strategy": "Value-oriented (name signal)",
