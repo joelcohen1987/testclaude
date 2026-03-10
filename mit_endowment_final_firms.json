@@ -562,6 +562,22 @@
   {
     "rank": 36,
     "tier": 2,
+    "name": "KEYROCK CAPITAL MANAGEMENT LIMITED",
+    "strategy": "Concentrated Value Equity (Asia-Pacific)",
+    "match_level": "YES",
+    "description": "HK-based fundamental, multi-year concentrated strategy in emerging growth companies in Asia-Pacific (especially Japan). Seeks exceptional management building high-quality businesses in tech, consumer, services. Patient capital. $444M AUM.",
+    "why_mit": "Multi-year, concentrated, quality-focused. Invests own capital alongside institutional investors.",
+    "website": "https://hk.linkedin.com/company/keyrock-capital-management-limited",
+    "aum_millions": 443.6,
+    "fund_types": "Hedge(1), PE(2)",
+    "location": "HONG KONG, Hong Kong",
+    "crd": "299521",
+    "sec_number": "802-114367",
+    "num_funds": "3"
+  },
+  {
+    "rank": 37,
+    "tier": 2,
     "name": "KEYSTONE INVESTORS PTE. LTD.",
     "strategy": "L/S Equity (Greater China)",
     "match_level": "MAYBE",
@@ -576,7 +592,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 37,
+    "rank": 38,
     "tier": 2,
     "name": "KINTBURY CAPITAL LLP",
     "strategy": "Equity",
@@ -592,7 +608,7 @@
     "num_funds": "3"
   },
   {
-    "rank": 38,
+    "rank": 39,
     "tier": 2,
     "name": "LANDMARK VALUE INVESTMENTS",
     "strategy": "Value Investing",
@@ -608,7 +624,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 39,
+    "rank": 40,
     "tier": 2,
     "name": "LIMESTONE VALUE PARTNERS, LLC",
     "strategy": "Value Equity",
@@ -624,7 +640,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 40,
+    "rank": 41,
     "tier": 2,
     "name": "LONG CORRIDOR ASSET MANAGEMENT LIMITED",
     "strategy": "Cross-Asset (Asia/China)",
@@ -640,7 +656,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 41,
+    "rank": 42,
     "tier": 2,
     "name": "NINE MASTS CAPITAL LIMITED",
     "strategy": "Equity (Asia)",
@@ -656,7 +672,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 42,
+    "rank": 43,
     "tier": 2,
     "name": "OLESEN CAPITAL MANAGEMENT LLC",
     "strategy": "Value Equity",
@@ -672,7 +688,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 43,
+    "rank": 44,
     "tier": 2,
     "name": "OLP CAPITAL MANAGEMENT LIMITED",
     "strategy": "Equity (China)",
@@ -688,7 +704,7 @@
     "num_funds": "2"
   },
   {
-    "rank": 44,
+    "rank": 45,
     "tier": 2,
     "name": "OVATA CAPITAL MANAGEMENT LIMITED",
     "strategy": "Equity (Asia)",
@@ -704,7 +720,7 @@
     "num_funds": "3"
   },
   {
-    "rank": 45,
+    "rank": 46,
     "tier": 2,
     "name": "OXBOW CAPITAL MANAGEMENT (HK) LIMITED",
     "strategy": "Fundamental Equity (Asia)",
@@ -720,7 +736,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 46,
+    "rank": 47,
     "tier": 2,
     "name": "PALLISER CAPITAL (UK) LTD",
     "strategy": "Activist Value (Global)",
@@ -736,7 +752,7 @@
     "num_funds": "2"
   },
   {
-    "rank": 47,
+    "rank": 48,
     "tier": 2,
     "name": "PERSEVERANCE ASSET MANAGEMENT INTERNATIONAL (SINGAPORE) PTE. LTD",
     "strategy": "Equity (Asia)",
@@ -752,7 +768,7 @@
     "num_funds": "2"
   },
   {
-    "rank": 48,
+    "rank": 49,
     "tier": 2,
     "name": "RED OAK PARTNERS, LLC",
     "strategy": "Small-Cap Value / Activist",
@@ -768,7 +784,7 @@
     "num_funds": "3"
   },
   {
-    "rank": 49,
+    "rank": 50,
     "tier": 2,
     "name": "SSVL (MONACO) S.A.M.",
     "strategy": "Value Equity",
@@ -784,7 +800,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 50,
+    "rank": 51,
     "tier": 2,
     "name": "TRESIDOR INVESTMENT MANAGEMENT LLP",
     "strategy": "Equity (Global)",
@@ -800,7 +816,7 @@
     "num_funds": "2"
   },
   {
-    "rank": 51,
+    "rank": 52,
     "tier": 2,
     "name": "TYBOURNE CAPITAL MANAGEMENT (HK) LTD",
     "strategy": "Growth Equity (Asia)",
@@ -816,7 +832,7 @@
     "num_funds": "7"
   },
   {
-    "rank": 52,
+    "rank": 53,
     "tier": 2,
     "name": "VALUEQUEST CAPITAL MANAGEMENT LIMITED",
     "strategy": "Value Equity (India)",
@@ -832,7 +848,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 53,
+    "rank": 54,
     "tier": 2,
     "name": "VELT PARTNERS INVESTIMENTOS LTDA.",
     "strategy": "Long-term Quality Equity (Brazil)",
@@ -848,7 +864,7 @@
     "num_funds": "5"
   },
   {
-    "rank": 54,
+    "rank": 55,
     "tier": 2,
     "name": "VOR CAPITAL LLP",
     "strategy": "Concentrated Equity (Internet/Consumer)",
@@ -864,7 +880,7 @@
     "num_funds": "4"
   },
   {
-    "rank": 55,
+    "rank": 56,
     "tier": 2,
     "name": "WELWING CAPITAL GROUP LIMITED",
     "strategy": "Equity (Asia)",
@@ -880,7 +896,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 56,
+    "rank": 57,
     "tier": 3,
     "name": "ALL-STARS INVESTMENT LIMITED",
     "strategy": "Multi-Strategy (China)",
@@ -896,7 +912,7 @@
     "num_funds": "6"
   },
   {
-    "rank": 57,
+    "rank": 58,
     "tier": 3,
     "name": "ARKENSTONE LLP",
     "strategy": "Equity/PE Mix",
@@ -912,7 +928,7 @@
     "num_funds": "3"
   },
   {
-    "rank": 58,
+    "rank": 59,
     "tier": 3,
     "name": "ATTESTOR LIMITED",
     "strategy": "Credit / Special Situations",
@@ -928,7 +944,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 59,
+    "rank": 60,
     "tier": 3,
     "name": "BOYU CAPITAL MANAGEMENT (SINGAPORE) PTE. LTD.",
     "strategy": "Growth PE (China/Asia)",
@@ -944,7 +960,7 @@
     "num_funds": "1"
   },
   {
-    "rank": 60,
+    "rank": 61,
     "tier": 3,
     "name": "CONGRUENT INVESTMENT PARTNERS, LLC",
     "strategy": "Equity/PE",
@@ -958,22 +974,6 @@
     "crd": "155803",
     "sec_number": "802-124846",
     "num_funds": "5"
-  },
-  {
-    "rank": 61,
-    "tier": 3,
-    "name": "MELODY CAPITAL PARTNERS, LP",
-    "strategy": "Multi-Strategy",
-    "match_level": "MAYBE",
-    "description": "NYC-based investment firm with hedge and PE funds. $145M AUM.",
-    "why_mit": "Small multi-strategy with equity component.",
-    "website": "HTTP://WWW.MELODY.COM",
-    "aum_millions": 145.1,
-    "fund_types": "Hedge(3), PE(1)",
-    "location": "NEW YORK, NY",
-    "crd": "295190",
-    "sec_number": "802-132337",
-    "num_funds": "4"
   },
   {
     "rank": 62,

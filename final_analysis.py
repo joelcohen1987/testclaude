@@ -241,6 +241,14 @@ RESEARCHED_FIRMS = {
         "why_mit": "Multi-strategy platform, not concentrated value.",
     },
 
+    # ── Additional confirmed matches from agent research ────────────────────
+    "KEYROCK CAPITAL MANAGEMENT LIMITED": {
+        "tier": 2, "match": "YES",
+        "strategy": "Concentrated Value Equity (Asia-Pacific)",
+        "description": "HK-based fundamental, multi-year concentrated strategy in emerging growth companies in Asia-Pacific (especially Japan). Seeks exceptional management building high-quality businesses in tech, consumer, services. Patient capital. $444M AUM.",
+        "why_mit": "Multi-year, concentrated, quality-focused. Invests own capital alongside institutional investors.",
+    },
+
     # ── Additional Tier 2 firms from expanded research ─────────────────────
     "COREVIEW CAPITAL MANAGEMENT LIMITED": {
         "tier": 2, "match": "MAYBE",
@@ -422,12 +430,7 @@ RESEARCHED_FIRMS = {
         "description": "Monaco-based value-oriented investment firm. $245M AUM.",
         "why_mit": "Value orientation.",
     },
-    "MELODY CAPITAL PARTNERS, LP": {
-        "tier": 3, "match": "MAYBE",
-        "strategy": "Multi-Strategy",
-        "description": "NYC-based investment firm with hedge and PE funds. $145M AUM.",
-        "why_mit": "Small multi-strategy with equity component.",
-    },
+    # MELODY CAPITAL PARTNERS removed - confirmed as private credit in wind-down
     "CONGRUENT INVESTMENT PARTNERS, LLC": {
         "tier": 3, "match": "MAYBE",
         "strategy": "Equity/PE",
@@ -458,6 +461,11 @@ RESEARCHED_FIRMS = {
     "ANDURAND CAPITAL MANAGEMENT LTD.": {"tier": 99, "match": "NO", "strategy": "Commodity Trading", "description": "Oil and commodity trading.", "why_mit": "N/A"},
     "HASHDEX ASSET MANAGEMENT LTD": {"tier": 99, "match": "NO", "strategy": "Crypto", "description": "Crypto/digital asset fund.", "why_mit": "N/A"},
     "FLORIN COURT CAPITAL LLP": {"tier": 99, "match": "NO", "strategy": "Systematic/Trend", "description": "Systematic trend-following.", "why_mit": "N/A"},
+    "ARKKAN CAPITAL MANAGEMENT LIMITED": {"tier": 99, "match": "NO", "strategy": "Credit/Distressed", "description": "Asia-Pacific credit/distressed. Ex-Goldman Special Situations.", "why_mit": "N/A"},
+    "MELODY CAPITAL PARTNERS, LP": {"tier": 99, "match": "NO", "strategy": "Private Credit", "description": "Private credit/direct lending. Now in wind-down.", "why_mit": "N/A"},
+    "ORCHARD GLOBAL ASSET MANAGEMENT (S) PTE LTD": {"tier": 99, "match": "NO", "strategy": "Structured Credit", "description": "Structured credit, CLOs, bank capital.", "why_mit": "N/A"},
+    "SPARTA CAPITAL MANAGEMENT LTD": {"tier": 99, "match": "NO", "strategy": "Event-Driven", "description": "Ex-Elliott. Event-driven activist, multi-strategy.", "why_mit": "N/A"},
+    "OPEN FOREST ASSET MANAGEMENT, LLC": {"tier": 99, "match": "NO", "strategy": "Fund of Funds", "description": "Value fund of hedge funds. Limited info.", "why_mit": "N/A"},
 }
 
 
