@@ -283,24 +283,9 @@ RESEARCHED_FIRMS = {
         "description": "Singapore-based Asian L/S equity. Proprietary cycle investing framework. Strong 10+ year track record. $3.8B AUM.",
         "why_mit": "Consistent long-term performer in Asian equities.",
     },
-    "OVATA CAPITAL MANAGEMENT LIMITED": {
-        "tier": 2, "match": "MAYBE",
-        "strategy": "Equity (Asia)",
-        "description": "HK-based equity-focused hedge fund. $1.9B AUM.",
-        "why_mit": "Equity-focused Asia hedge fund. Requires further diligence.",
-    },
-    "TRESIDOR INVESTMENT MANAGEMENT LLP": {
-        "tier": 2, "match": "MAYBE",
-        "strategy": "Equity (Global)",
-        "description": "London-based equity-focused investment manager. $2.5B AUM.",
-        "why_mit": "Equity-focused with meaningful AUM.",
-    },
-    "AGAVE CAPITAL MANAGEMENT LIMITED": {
-        "tier": 2, "match": "MAYBE",
-        "strategy": "Equity",
-        "description": "Equity hedge fund. $1.4B AUM.",
-        "why_mit": "Equity-focused. Requires further diligence.",
-    },
+    # OVATA removed - confirmed multi-strategy multi-PM platform (arb, RV, event-driven, L/S)
+    # TRESIDOR removed - confirmed European credit hedge fund, not equity
+    # AGAVE removed - confirmed global macro (ex-Citadel PM), not value equity
     "CRYDER CAPITAL": {
         "tier": 1, "match": "YES",
         "strategy": "Concentrated Quality Equity (Global)",
@@ -349,18 +334,8 @@ RESEARCHED_FIRMS = {
         "description": "Asia/China focused investment manager. Capital structure investing. $844M AUM.",
         "why_mit": "Asia/China focus with experienced team.",
     },
-    "CLOUDALPHA CAPITAL MANAGEMENT LIMITED": {
-        "tier": 2, "match": "MAYBE",
-        "strategy": "L/S Equity (Global TMT)",
-        "description": "HK-based global TMT L/S equity. Founded by ex-Mirae analyst. Top performer in tech sectors. $1.2B AUM.",
-        "why_mit": "Fundamental TMT equity investor with strong track record.",
-    },
-    "BLUE DIAMOND ASSET MANAGEMENT AG": {
-        "tier": 2, "match": "MAYBE",
-        "strategy": "Equity",
-        "description": "Swiss-based equity hedge fund. $2.6B AUM.",
-        "why_mit": "Equity-focused with meaningful AUM.",
-    },
+    # CLOUDALPHA removed - tech-heavy L/S with high turnover, not long-term value
+    # BLUE DIAMOND removed - confirmed systematic equity volatility arbitrage, not value equity
     "PILGRIM PARTNERS ASIA (SINGAPORE) PTE. LTD.": {
         "tier": 2, "match": "MAYBE",
         "strategy": "Equity (Asia)",
@@ -470,6 +445,11 @@ RESEARCHED_FIRMS = {
     "BOYU CAPITAL MANAGEMENT (SINGAPORE) PTE. LTD.": {"tier": 99, "match": "NO", "strategy": "PE Buyout (China)", "description": "China-focused PE growth buyout. Notable deals: Alibaba, Starbucks China.", "why_mit": "N/A"},
     "BFAM PARTNERS (HONG KONG) LIMITED": {"tier": 99, "match": "NO", "strategy": "Multi-Asset Trading", "description": "Multi-asset trading: credit, convertibles, rates, equities, vol. Ex-Nomura prop.", "why_mit": "N/A"},
     "PINPOINT ASSET MANAGEMENT LTD": {"tier": 99, "match": "NO", "strategy": "Multi-Strategy", "description": "Multi-manager multi-strategy platform, Asian markets.", "why_mit": "N/A"},
+    "OVATA CAPITAL MANAGEMENT LIMITED": {"tier": 99, "match": "NO", "strategy": "Multi-Strategy", "description": "Pan-Asia multi-strategy multi-PM (arb, RV, event-driven, L/S). BlueCrest alumnus.", "why_mit": "N/A"},
+    "TRESIDOR INVESTMENT MANAGEMENT LLP": {"tier": 99, "match": "NO", "strategy": "Credit", "description": "European credit hedge fund. Ex-BlackRock/CS. Blackstone-backed.", "why_mit": "N/A"},
+    "AGAVE CAPITAL MANAGEMENT LIMITED": {"tier": 99, "match": "NO", "strategy": "Global Macro", "description": "Global macro. Ex-Citadel PM. Quant-driven macro strategy.", "why_mit": "N/A"},
+    "CLOUDALPHA CAPITAL MANAGEMENT LIMITED": {"tier": 99, "match": "NO", "strategy": "Tech L/S Equity", "description": "Tech-heavy L/S with high turnover. Not long-term value.", "why_mit": "N/A"},
+    "BLUE DIAMOND ASSET MANAGEMENT AG": {"tier": 99, "match": "NO", "strategy": "Quant/Systematic", "description": "Systematic equity volatility arbitrage. VIX futures/options.", "why_mit": "N/A"},
 }
 
 
