@@ -958,5 +958,37 @@
     "crd": "161946",
     "sec_number": "802-75397",
     "num_funds": "1"
+  },
+  {
+    "rank": 61,
+    "tier": 1,
+    "name": "EDGEWORTH CAPITAL PTY LTD",
+    "strategy": "Concentrated Quality Equity (Global Small/Mid-Cap)",
+    "match_level": "YES",
+    "description": "Australia-based independent asset manager running the Edgeworth Global Fund. Long-only, concentrated portfolio of high-quality small and mid-cap companies across North America, Western Europe (Nordics, UK, Germany, France), and Developed Asia (Australia, NZ, Japan). Fund capped at $500M AUM to preserve investable universe. Founded by Robert Poiner, Thomas Davies, and William Bowler. Serves HNW individuals, family offices, and endowments. ~$141M AUM.",
+    "why_mit": "Classic quality-focused, concentrated, long-only equity manager investing in under-researched small/mid-caps globally. Self-imposed AUM cap shows alignment with endowment-style investing. Already serves endowments and family offices.",
+    "website": "https://www.edgeworthcapital.com/",
+    "aum_millions": 141.2,
+    "fund_types": "Hedge(2)",
+    "location": "BONDI JUNCTION, Australia",
+    "crd": "335630",
+    "sec_number": "802-132596",
+    "num_funds": "2"
+  },
+  {
+    "rank": 62,
+    "tier": 1,
+    "name": "ANSERES CAPITAL MANAGEMENT, LLC",
+    "strategy": "Value Equity - Long-term, Risk-conscious",
+    "match_level": "YES",
+    "description": "Value-oriented hedge fund led by Robert Joo-Hyung Lee, former analyst of Li Lu (Himalaya Capital, disciple of Charlie Munger). Emphasis on capital preservation and survival over performance. Avoids leverage and excessive concentration. Obsesses over downside risk. Jersey City, NJ. ~$30.6M AUM.",
+    "why_mit": "Strong value investing pedigree through Li Lu lineage. Philosophy emphasizes long-term survival and capital preservation, highly aligned with endowment objectives. Small, emerging manager with differentiated risk-conscious approach.",
+    "website": "https://www.anserescapital.com/",
+    "aum_millions": 30.6,
+    "fund_types": "Hedge(1)",
+    "location": "JERSEY CITY, NJ",
+    "crd": "340105",
+    "sec_number": "802-135296",
+    "num_funds": "1"
   }
 ]
